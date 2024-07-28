@@ -51,3 +51,59 @@ Lien de notre projet déployé : https://dash-pybd-jules-dorbeau.herokuapp.com/
 Lien de nos données brutes : https://files.data.gouv.fr/lcsqa/concentrations-de-polluants-atmospheriques-reglementes/temps-reel/2021/
 
 Lien du projet Delta : https://delta.lrde.epita.fr/
+
+---
+
+# Done for the PYBD project - Jules Dorbeau and Noé Jenn-Treyer, SCIA 2023
+
+Here is our rendering for this project of creating a Dash application to make a presentation on data. 
+
+We chose to do this on the study of the evolution of pollutants in France, the environment being one of the most important issues at the moment, if not the most important.
+
+## Viewing our project: 
+
+To see what our project is doing, there are two options: use the application we deployed via the link we provided, or run the code on your computer so you can view it locally.
+
+### First option: 
+
+The first is to go through this link that will give you direct access to our dash application we have deployed: 
+
+https://dash-pybd-jules-dorbeau.herokuapp.com/
+
+(Loading may take some time)
+
+### Second option: 
+
+The second is to directly launch our two. py files with Python.
+
+To do this, the following steps are required: 
+
+To start, you will need to install the libraries required for this project with the requirements file located at the root of git:
+    
+    pip install -r requirements.txt
+
+The rest will be in our project file:
+
+    cd JD_NJ_Etude_of the_pollution
+
+Then, having already provided the processed data, you do not necessarily need to go through the data processing part which is the following (which can take around 15 minutes):
+
+    python3 get_data.py
+
+This file will unpack all raw data that is present in the form of 12 compressed folders (1 per month) to fully process them. Having a large amount of data, which makes the processing quite long, we have left the data used by the application in order to avoid having to do so. During processing, we also manage the deletion of raw and temporary data files so as not to keep unnecessary data. So you will only have the files used in the data folder at the end.
+
+Then to finish to launch the application in local, you just have to run the following command: 
+
+    python3 dash_app_pollution.py
+    
+Then you will have to log in at the following site: http://127.0.0.1:8051/
+
+You can freely use our project as you wish!
+
+## Links: 
+
+Link to our deployed project: https://dash-pybd-jules-dorbeau.herokuapp.com/
+
+Link to our raw data: https://files.data.gouv.fr/lcsqa/concentrations-de-polluant-atmospheris-reglementes/temps-reel/2021/
+
+Delta project link: https://delta.lrde.epita.fr/
